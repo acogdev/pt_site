@@ -1,0 +1,19 @@
+<!doctype html>
+<title>Color Quick Printing</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <h1>Color Quick Printing</h1>
+  <div class=metanav>
+
+        <ul id="navbar">
+            <li><a href="">Wedding</a></li>
+            <li><a href="">Graduation</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+
+  </div>
+  {% for message in get_flashed_messages() %}
+    <div class=flash>{{ message }}</div>
+  {% endfor %}
+  {% block body %}{% endblock %}
+</div>
