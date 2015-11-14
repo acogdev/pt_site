@@ -58,3 +58,5 @@ target/
 
 # Nikola
 colorquickprinting/output/
+
+*.properties
