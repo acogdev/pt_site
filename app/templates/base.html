@@ -1,0 +1,34 @@
+<!doctype html>
+<head>
+<script>
+var d = new Date();
+document.getElementById('year').innerHTML = d.getFullYear();
+</script>
+<title>{{ title }}</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div id='logo'>LOGO</div>
+<nav id='navbar'>
+            <div id="hmenu">
+
+        <ul >
+            <li><a href="/home">Home</a></li>
+            <li><a href="/invitations">Invitations</a></li>
+            <li><a href="/aboutus">About Us</a></li>
+        </ul>
+
+  </div>
+  </nav>
+<!--   {% for message in get_flashed_messages() %}
+    <div class=flash>{{ message }}</div>
+  {% endfor %} -->
+
+    </header>
+    <main>
+        {% block body %}{% endblock %}
+    </main>
+    <hr>
+    <footer id='footer'>Copyright © <span id='year'></span> Color Quick Printing</footer>
+</body>
